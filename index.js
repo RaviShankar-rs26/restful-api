@@ -4,19 +4,19 @@ import express from 'express'; // import express
 let users = [
     {
         id: 1,
-        firstName: "Shivam",
-        lastName: "Mishra",
+        firstName: "Ravi",
+        lastName: "Shankar",
         hobby: "Doodling"
     },
     {
         id: 2,
-        firstName: "Rizzwan",
+        firstName: "Reyan",
         lastName: "Ahmed",
         hobby: "FreeFire"
     },
     {
         id: 3,
-        firstName: "Keshav",
+        firstName: "Aman",
         lastName: "Mishra",
         hobby: "Clowning"
     },
@@ -113,4 +113,5 @@ app.delete("/users/:id", (req, res) => {
     // if user is found, update the users array with filtered users array
     users = users.filter(userObj => userObj != user);
     return res.status(200).json(users); // return the updated users array
+
 });
